@@ -10,5 +10,5 @@ function elementCiagu(n) {
     return elementCiagu(n - 1) + elementCiagu(n - 2);
     }
 }
-
-console.log(elementCiagu(9));
+elementCiagu();
+console.log(elementCiagu(2));
