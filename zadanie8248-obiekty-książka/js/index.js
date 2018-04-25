@@ -12,9 +12,9 @@ class Ksiazka {
     this.przeczytana === true;
 
     if (this.przeczytana) {
-        console.log("Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i została przeczytana");
+        return "Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i została przeczytana";
     } else {
-        console.log("Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i nie została przeczytana");
+        return "Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i nie została przeczytana";
     }
     }
 }
