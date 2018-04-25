@@ -16,27 +16,32 @@ class Ksiazka {
     } else {
         console.log("Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i nie została przeczytana");
     }
-//        console.log("Książka ma tytuł " + this.tytul + " autorem jest " + this.autor + " i została " + this.przeczytana);
-        
     }
 }
 
-//         var przeczytana;
-//    przeczytana = true;
-//
-//    if (przeczytana) {
-//        console.log("przeczytana");
-//    } else {
-//        console.log("nieprzeczytana");
-//    }
 
 var ziemiaObiecana = new Ksiazka("Ziemia Obiecana", "Władysław Reymont", false);
 var krzyzacy = new Ksiazka("Krzyżacy", "Henryk Sienkiewicz", false);
 var panTadeusz = new Ksiazka("Pan Tadeusz", "Adam Mickiewcz", true);
 
 
-console.log(ziemiaObiecana);
-console.log(krzyzacy);
-console.log(krzyzacy.opiszKsiazke());
-console.log(ziemiaObiecana.opiszKsiazke());
+var tablica = [];
+
+tablica.push(krzyzacy, ziemiaObiecana, panTadeusz);
+
+function iloscPrzeczytanych(tablica) {
+    
+    var iloscPrzeczytanych = 0;
+    
+    for (var i = 0; i <= 2; i++) {
+        if (tablica[i].przeczytana === true) {
+            iloscPrzeczytanych += 1;
+            
+        }
+        console.log(tablica[i].opiszKsiazke());
+    }
+    return iloscPrzeczytanych;
+}
+
+console.log(iloscPrzeczytanych(tablica));
 
