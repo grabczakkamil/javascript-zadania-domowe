@@ -8,7 +8,9 @@ function porownanie(tablica) {
 
             if (tablica[i] > tablica[i+1]) {
                 
-                [tablica[i],tablica[i+1]]=[tablica[i+1], tablica[i]];
+                var bufor = tablica[i];
+                tablica[i] = tablica[i + 1];
+                tablica[i + 1] = bufor;
                 
             }
         }
