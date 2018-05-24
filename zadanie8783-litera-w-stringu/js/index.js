@@ -5,9 +5,15 @@ function policzLitery(a,b) {
     var arr = inscription.split('');
     var wynik = 0;
     
+    if (b == b.toUpperCase()) {
+        var y = b.toLowerCase();
+    }
+    else {
+        var y = b.toUpperCase();
+    }
     for (var i = 0; i <= arr.length; i++) {
         var x = arr[i];
-        if (x === b) {
+        if (x == b || x == y) {
             wynik += 1
         }
     }
